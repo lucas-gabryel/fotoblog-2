@@ -5,7 +5,7 @@
 }
 
 :root {
-    font-size: 62,5%;
+    font-size: 62.5%; /* Não usar vírgolas no código, somente pontos */
     font-family: 'Mulish', sans-serif;
 
     --color-base-white: white;
@@ -28,11 +28,52 @@ body {
 
 .container {
     padding: 1.6rem 3.2rem;
-    width: min(70rem, 100%);
+    width: min(112rem, 100%);
     margin: 0 auto;
+}
+
+header, nav, nav ul {
+    display: flex;
+    align-items: center;
+    gap: 7.2rem;
+    
+    font-weight: 700;
+}
+
+header form {
+    flex: 1;
+
+    padding: 1.2rem 1.6rem;
+
+    border-radius: 5px;
+    opacity: 0.56;
+    background: #EEE;
+}
+
+nav ul {
+    list-style: none;
+    font-size: 1.8rem;
+    color: var(--color-base-grey-300);
+}
+
+ul li.active{ /* a classe tem que ser usada sem espaço se não, não funciona. Se liga!!! */
+    color: var(--color-base-grey-900);
+}
+
+.avatar {
+    height: 4.2rem;
+    width: 4.2rem;
+
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 main {
     overflow-y: scroll;
     background-color: var(--color-base-grey-100);
+}
+
+footer {
+    text-align: center;
+    font-weight: 600;
 }
